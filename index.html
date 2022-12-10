@@ -51,13 +51,12 @@
         async function copyTextToSlack() {
             const params = new URLSearchParams(window.location.search);
             // await navigator.clipboard.writeText(params.get("text") ?? "https://shorts.growthx.club")
-            let slackUrl = "";
+            let slackUrl = "slack://open";
             if (params.has("user")) {
                 slackUrl = "slack://user?team=" + params.get("team") + "&id=" + params.get("user")
             }
-            // setTimeout(() => {
-                window.location.href = slackUrl
-            // }, 3000)
+            console.log(slackUrl)
+            window.open(slackUrl)
             
             
             // window.location.href = params.get("url")
