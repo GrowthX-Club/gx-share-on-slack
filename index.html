@@ -56,7 +56,7 @@
                 slackUrl = "slack://user?team=" + params.get("team") + "&id=" + params.get("user")
             }
             console.log(slackUrl)
-            window.open(slackUrl)
+            window.location.href = slackUrl
             
             
             // window.location.href = params.get("url")
