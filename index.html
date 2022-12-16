@@ -50,7 +50,7 @@
     <script>
         async function copyTextToSlack() {
             const params = new URLSearchParams(window.location.search);
-            // await navigator.clipboard.writeText(params.get("text") ?? "https://shorts.growthx.club")
+            await navigator.clipboard.writeText(params.get("text") ?? "https://shorts.growthx.club")
             let slackUrl = "slack://open";
             if (params.has("user")) {
                 slackUrl = "slack://user?team=" + params.get("team") + "&id=" + params.get("user")
@@ -71,7 +71,9 @@
     <div>
         <div style="padding-bottom: 12px">You'll be now redirected to your Slack.</div>
         <div>You only need to Paste or CTRL-V.</div>
+        <button onclick="copyTextToSlack()">Text</button>
     </div>
+    
 </body>
 
 </html>
