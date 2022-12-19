@@ -2,9 +2,11 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.cdnfonts.com/css/gilroy-bold?styles=20876,20877,20878,20879,20880" rel="stylesheet">
     <style>
         html {
-            font-family: Arial, sans-serif;
+            @import url('https://fonts.cdnfonts.com/css/gilroy-bold?styles=20876,20877,20878,20879,20880');
+            font-family: 'Gilroy-Bold', sans-serif !important;
         }
         img {
             position: fixed;
@@ -66,12 +68,18 @@
 </head>
 
 <body
-    style="background-color: #091c32;display: flex; height: 100vh; width: 100vw;justify-content: center;align-items:center;overflow: hidden;">
+    style="background-color: #000000;display: flex; height: 100vh; width: 100vw;justify-content: center;align-items:center;overflow: hidden; text-align:center;">
     <img src="growthx-light.svg" style="position: fixed;top: 10px;right:10px; width: 8rem; height: 2rem;"/>
-    <div>
-        <div style="padding-bottom: 12px">You'll be now redirected to your Slack.</div>
+    <div style="text-align:center; justify-content: center;">
+        <div style="padding-bottom: 12px text-align:center;">You'll be now redirected to your Slack.</div>
         <div>You only need to Paste or CTRL-V.</div>
-        <button onclick="copyTextToSlack()">Text</button>
+        <button style="
+  background: #fff;
+  border-radius: .375rem;
+  border-style: solid;
+  border-width: .125rem;
+  color: #212121;
+  padding: .875rem 1.125rem;" onclick="copyTextToSlack()">Take me to Slack</button>
     </div>
     
 </body>
