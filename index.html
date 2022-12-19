@@ -52,9 +52,7 @@
     <script>
         async function copyTextToSlack() {
             const params = new URLSearchParams(window.location.search);
-            await navigator.clipboard.writeText(params.get("text") ?? "ASK: 
-
-CONTEXT:")
+            await navigator.clipboard.writeText(params.get("text") ?? "ASK: <BR> CONTEXT:")
             let slackUrl = "slack://open";
             if (params.has("user")) {
                 slackUrl = "slack://user?team=" + params.get("team") + "&id=" + params.get("user")
